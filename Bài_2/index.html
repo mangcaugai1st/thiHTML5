@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 350px;
+            border-radius: 30px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        form {
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+        form input {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <label>Họ tên</label><br>
+        <input type="text" required placeholder="Nhập họ tên của bạn"><br>
+        <label>Số điện thoại</label><br>
+        <input type="tel" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Số điện thoại của bạn"><br>
+        <label>Địa chỉ email</label><br>
+        <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Nhập địa chỉ email của bạn"><br>
+        <label>Bạn biết FPT Jetking qua</label><br>
+        <select name="" id="" required>
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+            <option value="">D</option>
+        </select> <br>
+        <label>Bạn muốn học tại</label><br>
+        <input type="radio" value="TP. Hồ Chí Minh" name="test" checked>Tp. HCM<br>
+        <input type="radio" value="Hà Nội" name="test">Hà Nội<br>
+        <input type="submit" value="Đăng ký">
+        <input type="button" value="Làm lại" onclick="window.location.reload();">
+    </form>
+    </div>
+</body>
+</html>

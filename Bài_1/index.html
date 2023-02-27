@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0 auto;
+        }
+        .a {
+            width: auto;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        .a p {
+            margin-right: 30px;
+        }
+        nav {
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: #2a8b09;
+        }
+        nav a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+        nav a:after {
+            content: "";
+            position: absolute;
+            background-color: orangered;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+        nav a:hover:after {
+            width: 100%;
+        }
+        nav a:hover {
+            background-color: #e81307;
+        }
+        .product {
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        .product img {
+            width: 298px;
+        }
+        .product p {
+            text-align: center;
+        }
+        .btn {
+            margin-left: 30%;
+        }
+        .btn button {
+            background-color: #2a8b09;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            column-gap: 1px;
+        }
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--    <header>
+        <div class="a">
+            <p>a</p>
+            <p>b</p>
+            <p>c</p>
+            <p>d</p>
+            <p>e</p>
+        </div>
+    </header>
+    -->
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Lịch Sử Hình Thành</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Đại Lý</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Chuỗi Cửa Hàng</a>
+        <a href="#">Hộp Trà In Logo</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+    <div class="container">
+        <div class="product">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/201/525/products/tra-tan-cuong-hung-dua-4.jpg?v=1645875819000" alt="">
+            <p>Hộp chè Tân Cương Hứng Dừa - Qùa tặng Chè Thái Nguyên</p>
+            <p style="color: red">250.000đ</p>
+            <div class= "btn" style="display: flex; flex-direction: row">
+                <button>Chi tiết</button>
+                <button>Đặt hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/201/525/products/tra-tan-cuong-long-phuong-4.jpg?v=1646047045000" alt="">
+            <p>Hộp chè Tân Cương Hứng Dừa - Qùa tặng Chè Thái Nguyên</p>
+            <p style="color: red">330.000đ</p>
+            <div class= "btn" style="display: flex; flex-direction: row">
+                <button>Chi tiết</button>
+                <button>Đặt hàng</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://bizweb.dktcdn.net/thumb/large/100/201/525/products/che-tan-cuong-phu-quy-1.jpg?v=1639884221000" alt="">
+            <p>Bộ Qùa Tặng Trà Tân Cương Phú Qúy 300gram</p>
+            <p style="color: red">695.000đ</p>
+            <div class= "btn" style="display: flex; flex-direction: row">
+                <button>Chi tiết</button>
+                <button>Đặt hàng</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+</body>
+</html>
